@@ -9,13 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "heart.fill")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("cats are better")
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [.purple, .white, .pink]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            VStack {
+                Image(systemName: "heart.fill")
+                    .imageScale(.large)
+                    .foregroundColor(.pink)
+                Text("cats are better")
+                    .font(.largeTitle)
+                    
+            }
+            .padding()
         }
-        .padding()
+        .ignoresSafeArea()
     }
 }
 
